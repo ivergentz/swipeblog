@@ -1,7 +1,10 @@
 import React from 'react'
-import Card from './Card'
-import './App.css'
+import PostEntry from './components/PostEntry'
 
 export default function App() {
-  return <Card></Card>
+  return (
+    <>
+      <PostEntry />
+    </>
+  )
 }
