@@ -1,14 +1,13 @@
 import React from 'react'
 import Card from '../Card'
-import items from '../assets/data/CardData'
+import posts from '../assets/data/CardData'
 
-export default function PostEntry(index) {
+export default function PostEntry() {
   return (
-    <div>
-      {items.map((post) => (
-        <Card key={index} {...post} />
+    <>
+      {posts.map((post) => (
+        <Card {...post} />
       ))}
-      {console.log(items)}
-    </div>
+    </>
   )
 }

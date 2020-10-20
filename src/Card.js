@@ -15,7 +15,7 @@ export default function Card(posts, index) {
   const newArr = Array.from(posts.tags)
   // console.log('tags array', newArr)
   return (
-    <CardLayout>
+    <Container>
       <ThumbnailImage
         src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
         alt=""
@@ -29,15 +29,16 @@ export default function Card(posts, index) {
       <SubTitle>{posts.subTitle}</SubTitle>
       <ReadMore> &uarr; Zum Artikel &uarr;</ReadMore>
       <Exit>X</Exit>
-      <BackgroundImage src="https://source.unsplash.com/random" alt="" />
-    </CardLayout>
+      <BackgroundImage src={'https://source.unsplash.com/random'} alt="" />
+    </Container>
   )
 }
 
-const CardLayout = styled.div`
+const Container = styled.div`
   display: flex;
   padding: 0;
   margin: 0;
+
   z-index: 0;
 `
 
