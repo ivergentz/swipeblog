@@ -1,10 +1,13 @@
 import React from 'react'
-import PostEntry from './components/PostEntry'
+import Title from './components/Title'
+import Navigation from './components/Navigation'
+// import PostEntry from './components/PostEntry'
 
 export default function App() {
   return (
     <>
-      <PostEntry />
+      <Title>Title</Title>
+      <Navigation />
     </>
   )
 }
