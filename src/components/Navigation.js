@@ -2,14 +2,17 @@ import React from 'react'
 import styled from 'styled-components/macro'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import HomePage from './HomePage'
+import AboutPage from './AboutPage'
 import BlogPage from './BlogPage'
+import CvPage from './CvPage'
+import ContactPage from './ContactPage'
 
 export default function Navigation() {
   return (
     <>
       <Router>
         <NavigationContainer>
-          <Link to="/">
+          <Link exact to="/">
             <StyledNavigationButton>
               <CategoryText>Home</CategoryText>
             </StyledNavigationButton>
@@ -46,6 +49,16 @@ export default function Navigation() {
 
           <Route path="/blog">
             <BlogPage />
+          </Route>
+
+          <Route path="/about">
+            <AboutPage />
+          </Route>
+          <Route path="/cv">
+            <CvPage />
+          </Route>
+          <Route path="/contact">
+            <ContactPage />
           </Route>
         </Switch>
       </Router>
