@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components/macro'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
 import HomePage from './HomePage'
 import AboutPage from './AboutPage'
 import BlogPage from './BlogPage'
@@ -9,50 +9,49 @@ import ContactPage from './ContactPage'
 
 export default function Navigation() {
   return (
-    <>
-      <Router>
+    <Router>
+      <div>
         <NavigationContainer>
-          <Link exact to="/">
+          <Link to="/">
             <StyledNavigationButton>
-              <CategoryText>Home</CategoryText>
+              <span>Home</span>
             </StyledNavigationButton>
           </Link>
 
           <Link to="/blog">
             <StyledNavigationButton>
-              <CategoryText>Blog</CategoryText>
-            </StyledNavigationButton>
-          </Link>
-
-          <Link to="/about">
-            <StyledNavigationButton>
-              <CategoryText>About</CategoryText>
+              <span>Blog</span>
             </StyledNavigationButton>
           </Link>
 
           <Link to="/cv">
             <StyledNavigationButton>
-              <CategoryText>CV</CategoryText>
+              <span>CV</span>
+            </StyledNavigationButton>
+          </Link>
+
+          <Link to="/about">
+            <StyledNavigationButton>
+              <span>About</span>
             </StyledNavigationButton>
           </Link>
 
           <Link to="/contact">
             <StyledNavigationButton>
-              <CategoryText>Contact</CategoryText>
+              <span>Contact</span>
             </StyledNavigationButton>
           </Link>
         </NavigationContainer>
+
         <Switch>
-          <Route path="/">
+          <Route exact path="/">
             <HomePage />
           </Route>
-
-          <Route path="/blog">
-            <BlogPage />
-          </Route>
-
           <Route path="/about">
             <AboutPage />
+          </Route>
+          <Route path="/blog">
+            <BlogPage />
           </Route>
           <Route path="/cv">
             <CvPage />
@@ -61,20 +60,21 @@ export default function Navigation() {
             <ContactPage />
           </Route>
         </Switch>
-      </Router>
-    </>
+      </div>
+    </Router>
   )
 }
 
-const NavigationContainer = styled.section`
+const NavigationContainer = styled.div`
   display: grid;
   align-content: center;
   grid-template-columns: repeat(6, calc(30%));
   overflow: auto;
   white-space: nowrap;
   height: auto;
-  /* background: grey; */
-  padding: 10px;
+  background: #ededed;
+  padding: 0 0 12px 0;
+  height: 16vh;
 `
 
 const StyledNavigationButton = styled.button`
@@ -83,10 +83,20 @@ const StyledNavigationButton = styled.button`
   height: 75px;
   border-radius: 50px;
   border: 0;
-`
+  margin-top: 2.5vh;
+  margin-left: 12px;
+  background: white;
+  border: 0.5px solid red;
+  background-image: url('https://cdn.pixabay.com/photo/2017/06/21/07/27/seattle-2426307__480.jpg');
 
-const CategoryText = styled.p`
-  color: red;
-  font-size: 0.5em;
-  font-weight: 400;
+  span {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 11vh;
+    color: red;
+    font-size: 0.5em;
+    font-weight: 100;
+    text-decoration: none;
+  }
 `
