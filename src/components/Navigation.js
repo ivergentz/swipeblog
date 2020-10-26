@@ -35,7 +35,7 @@ export default function Navigation() {
         {navLinks.map((link, index) => (
           <Link to={link.path}>
             <StyledNavigationButton key={index}>
-              <StyledLinkText>{link.title}</StyledLinkText>
+              <p>{link.title}</p>
             </StyledNavigationButton>
           </Link>
         ))}
@@ -91,22 +91,10 @@ const StyledNavigationButton = styled.li`
   background: red;
   align-content: center;
   justify-content: center;
+  p {
+    color: white;
+    font-size: 0.5em;
+    font-weight: 300;
+    text-transform: lowercase;
+  }
 `
-const StyledLinkText = styled.a`
-  font-weight: 300;
-  font-size: 0.7em;
-  color: white;
-`
-
-// const ErrorMsg = styled.p`
-//   display: flex;
-//   font-weight: 500;
-//   color: white;
-//   background: red;
-//   justify-content: center;
-//   align-items: center;
-//   width: 70vw;
-//   margin: 10vh auto;
-//   border-radius: 5px;
-//   height: 20vh;
-// `
