@@ -48,8 +48,9 @@ export default function Navigation() {
             </StyledNavigationButton>
           </Link>
         </NavigationContainer>
+
         <Switch>
-          <Route exact={true} path="/" component={HomePage} />
+          <Route exact path="/" component={HomePage} />
 
           <Route path="/about" component={AboutPage} />
 
@@ -104,6 +105,7 @@ const NavigationContainer = styled.div`
   margin-top: 8vh;
   position: fixed;
   z-index: 100;
+  scroll-behavior: smooth;
 `
 
 const StyledNavigationButton = styled.button`

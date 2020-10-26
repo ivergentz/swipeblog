@@ -49,7 +49,7 @@ const ThumbnailImage = styled.img`
   border-radius: 50px;
   margin-top: 7vh;
   margin-left: 7vw;
-  z-index: 100;
+  z-index: 10;
 `
 const Category = styled.h4`
   position: absolute;
@@ -63,14 +63,14 @@ const Category = styled.h4`
   font-weight: 300;
   margin-top: 8vh;
   margin-left: 20vw;
-  z-index: 100;
+  z-index: 10;
 `
 const Title = styled.h2`
   position: absolute;
   margin-left: 10%;
   margin-top: 55vh;
   font-weight: 300;
-  z-index: 100;
+  z-index: 10;
   padding: 0 10px;
   background: red;
   color: white;
@@ -86,7 +86,7 @@ const SubTitle = styled.h3`
   margin-right: 10%;
   margin-top: 60vh;
   font-weight: 300;
-  z-index: 100;
+  z-index: 10;
   font-size: 0.6em;
 `
 
@@ -95,7 +95,7 @@ const ReadMore = styled.p`
   color: white;
   font-size: 0.5em;
   margin: 70vh 0;
-  z-index: 100;
+  z-index: 10;
   margin-left: 38vw;
 `
 // const Exit = styled.button`
@@ -113,6 +113,6 @@ const ReadMore = styled.p`
 const Background = styled.img`
   object-fit: cover;
   width: 100%;
-  height: 74vh;
-  z-index: 0;
+  height: 76vh;
+  position: fixed;
 `
