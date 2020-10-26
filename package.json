@@ -22,7 +22,8 @@
     "react-use-gesture": "^7.0.16",
     "react-with-gesture": "^4.0.8",
     "scrollview": "0.0.0",
-    "styled-components": "^5.2.0"
+    "styled-components": "^5.2.0",
+    "uuid": "^8.3.1"
   },
   "scripts": {
     "start": "react-scripts start",
