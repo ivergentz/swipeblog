@@ -36,6 +36,7 @@ const Container = styled.div`
   overflow: auto;
   white-space: nowrap;
   height: auto;
+  padding-top: 26vh;
 `
 
 const ThumbnailImage = styled.img`

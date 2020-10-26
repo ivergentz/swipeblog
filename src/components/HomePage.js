@@ -6,7 +6,7 @@ export default function HomePage({ item, title, SubText, id }) {
   console.log('HomePage', postdata)
 
   return (
-    <>
+    <Container>
       <SubHeader>asjdfkh</SubHeader>
       <ThumbnailImage />
       <EntryText>
@@ -22,9 +22,13 @@ export default function HomePage({ item, title, SubText, id }) {
         <Title>{title}</Title>
         <SubTitle>sadf</SubTitle>
       </BlogContainer>
-    </>
+    </Container>
   )
 }
+
+const Container = styled.section`
+  padding-top: 26vh;
+`
 
 const BlogContainer = styled.section`
   display: grid;
@@ -40,16 +44,13 @@ const SubHeader = styled.h2`
   font-weight: 300;
   margin: 2vh;
 `
-const ThumbnailImage = styled.img`
-  display: flex;
+const ThumbnailImage = styled.div`
   width: 100px;
   height: 100px;
   border-radius: 50px;
-  border: 0;
+  border: none;
   margin-top: 2.5vh;
   margin-left: 12px;
-  background: white;
-  border: 0.5px solid red;
   background: red;
 `
 

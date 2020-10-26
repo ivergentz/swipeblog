@@ -4,7 +4,7 @@ import styled from 'styled-components/macro'
 
 export default function PostEntry() {
   return (
-    <>
+    <Container>
       <Header>Neue Fische so ists</Header>
       <StyledArticle>
         Quis elit fugiat nulla dolore dolor officia fugiat fugiat ut. Ea eu
@@ -38,9 +38,13 @@ export default function PostEntry() {
       <Link to="/blog">
         <BackButton>&#8592; zurück &#8592;</BackButton>
       </Link>
-    </>
+    </Container>
   )
 }
+
+const Container = styled.section`
+  padding-top: 26vh;
+`
 
 const TextImage = styled.img`
   width: 100vw;
