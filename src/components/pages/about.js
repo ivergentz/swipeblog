@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export default function ContactPage() {
-  return <Container>Contact</Container>
+export default function About() {
+  return <Container>About</Container>
 }
 
 const Container = styled.section`

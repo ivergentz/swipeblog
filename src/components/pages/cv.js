@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export default function CvPage() {
+export default function Cv() {
   return <Container>CV</Container>
 }
 

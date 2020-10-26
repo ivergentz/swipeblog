@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components/macro'
 import { Link } from 'react-router-dom'
 
-export default function BlogPage() {
+export default function Blog() {
   return (
     <>
       <Container>
@@ -12,7 +12,7 @@ export default function BlogPage() {
             alt=""
           />
           <Category>BlogPost</Category>
-          <Title>Hier könnte ihre Werbung stehen</Title>
+          <Title>a b c</Title>
           <SubTitle>Nu aber schnell mal lesen</SubTitle>
           <ReadMore> &uarr; Zum Artikel &uarr;</ReadMore>
           {/* <Exit>X</Exit> */}
@@ -67,6 +67,7 @@ const Category = styled.h4`
 `
 const Title = styled.h2`
   position: absolute;
+  width: auto;
   margin-left: 10%;
   margin-top: 55vh;
   font-weight: 300;

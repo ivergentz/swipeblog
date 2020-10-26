@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components/macro'
-import { postdata } from '../assets/data/data'
+import { postdata } from '../../assets/data/data'
 
-export default function HomePage({ item, title, SubText, id }) {
+export default function Home({ item, title, SubText, id }) {
   console.log('HomePage', postdata)
 
   return (

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components/macro'
 
-export default function PostEntry() {
+export default function Post() {
   return (
     <Container>
       <Header>Neue Fische so ists</Header>
