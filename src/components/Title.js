@@ -14,11 +14,11 @@ const TitleContainer = styled.div`
   flex-wrap: wrap;
   align-content: center;
   justify-content: flex-start;
-  height: 10vh;
-  background: '';
-  color: red;
-  position: sticky;
+  background: red;
+  color: white;
+  /* position: sticky; */
   z-index: 100;
+  height: 10vh;
 `
 
 const PageTitle = styled.h1`

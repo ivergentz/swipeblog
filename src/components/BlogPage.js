@@ -1,23 +1,26 @@
 import React from 'react'
 import styled from 'styled-components/macro'
+import { Link } from 'react-router-dom'
 
 export default function BlogPage() {
   return (
     <>
       <Container>
-        <ThumbnailImage
-          src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
-          alt=""
-        />
-        <Category>BlogPost</Category>
-        <Title>Hier könnte ihre Werbung stehen</Title>
-        <SubTitle>Nu aber schnell mal lesen</SubTitle>
-        <ReadMore> &uarr; Zum Artikel &uarr;</ReadMore>
-        {/* <Exit>X</Exit> */}
-        <Background
-          alt=""
-          src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
-        />
+        <Link to="/blog/postentry">
+          <ThumbnailImage
+            src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
+            alt=""
+          />
+          <Category>BlogPost</Category>
+          <Title>Hier könnte ihre Werbung stehen</Title>
+          <SubTitle>Nu aber schnell mal lesen</SubTitle>
+          <ReadMore> &uarr; Zum Artikel &uarr;</ReadMore>
+          {/* <Exit>X</Exit> */}
+          <Background
+            alt=""
+            src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
+          />
+        </Link>
       </Container>
     </>
   )
@@ -25,7 +28,6 @@ export default function BlogPage() {
 
 const Container = styled.div`
   display: grid;
-
   padding: 0;
   margin: 0;
   height: 74vh;
