@@ -6,61 +6,62 @@ import AboutPage from './AboutPage'
 import BlogPage from './BlogPage'
 import CvPage from './CvPage'
 import ContactPage from './ContactPage'
+import PostEntry from './PostEntry'
+import LoginPage from './LoginPage'
 
 export default function Navigation() {
   return (
     <Router>
-      <div>
-        <NavigationContainer>
-          <Link to="/">
-            <StyledNavigationButton>
-              <span>Home</span>
-            </StyledNavigationButton>
-          </Link>
+      <NavigationContainer>
+        <Link to="/">
+          <StyledNavigationButton>
+            <span>Home</span>
+          </StyledNavigationButton>
+        </Link>
 
-          <Link to="/blog">
-            <StyledNavigationButton>
-              <span>Blog</span>
-            </StyledNavigationButton>
-          </Link>
+        <Link to="/blog">
+          <StyledNavigationButton>
+            <span>Blog</span>
+          </StyledNavigationButton>
+        </Link>
 
-          <Link to="/cv">
-            <StyledNavigationButton>
-              <span>CV</span>
-            </StyledNavigationButton>
-          </Link>
+        <Link to="/cv">
+          <StyledNavigationButton>
+            <span>CV</span>
+          </StyledNavigationButton>
+        </Link>
 
-          <Link to="/about">
-            <StyledNavigationButton>
-              <span>About</span>
-            </StyledNavigationButton>
-          </Link>
+        <Link to="/about">
+          <StyledNavigationButton>
+            <span>About</span>
+          </StyledNavigationButton>
+        </Link>
 
-          <Link to="/contact">
-            <StyledNavigationButton>
-              <span>Contact</span>
-            </StyledNavigationButton>
-          </Link>
-        </NavigationContainer>
+        <Link to="/contact">
+          <StyledNavigationButton>
+            <span>Contact</span>
+          </StyledNavigationButton>
+        </Link>
+      </NavigationContainer>
+      <Switch>
+        <Route exact={true} path="/" component={HomePage} />
 
-        <Switch>
-          <Route exact path="/">
-            <HomePage />
-          </Route>
-          <Route path="/about">
-            <AboutPage />
-          </Route>
-          <Route path="/blog">
-            <BlogPage />
-          </Route>
-          <Route path="/cv">
-            <CvPage />
-          </Route>
-          <Route path="/contact">
-            <ContactPage />
-          </Route>
-        </Switch>
-      </div>
+        <Route path="/about" component={AboutPage} />
+
+        <Route exact path="/blog" component={BlogPage} />
+        <Route exact path="/blog/postentry" component={PostEntry} />
+
+        <Route path="/contact" component={ContactPage} />
+
+        <Route path="/cv" component={CvPage} />
+
+        <Route path="/login" component={LoginPage} />
+        {/* wenn falscher path eingegeben wird: */}
+        <Route
+          path="/:id"
+          render={() => <ErrorMsg>Oops. Falsche Seite Bro</ErrorMsg>}
+        />
+      </Switch>
     </Router>
   )
 }
@@ -72,7 +73,7 @@ const NavigationContainer = styled.div`
   overflow: auto;
   white-space: nowrap;
   height: auto;
-  background: #ededed;
+  /* background: #ededed; */
   padding: 0 0 12px 0;
   height: 16vh;
 `
@@ -99,4 +100,16 @@ const StyledNavigationButton = styled.button`
     font-weight: 100;
     text-decoration: none;
   }
+`
+const ErrorMsg = styled.p`
+  display: flex;
+  font-weight: 500;
+  color: white;
+  background: red;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+  margin: 10vh auto;
+  border-radius: 5px;
+  height: 20vh;
 `
