@@ -70,7 +70,7 @@ const NavigationContainer = styled.ul`
   grid-template-columns: repeat(6, calc(30%));
   overflow: auto;
   height: auto;
-  background: white;
+  background: red;
   padding: 0 0 4vh 0;
   height: 16vh;
   margin-top: 10vh;
